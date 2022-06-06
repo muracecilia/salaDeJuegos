@@ -1,0 +1,45 @@
+<header>
+    <style>
+        .boton{
+            width: 60px;
+            height: 80px;
+            margin: 10px;
+        }
+    </style>
+</header>
+<hr>
+<h2>Piedra Papel o Tijeras</h2>
+<br>
+<div *ngIf="nuevaJugada=='SI'">
+    <button type="button" (click)="verificar(1)"><img src="../../../assets/piedra.jpg" class="boton"/></button>
+    <button type="button"(click)="verificar(2)"><img src="../../../assets/papel.jpg" class="boton"/></button>
+    <button type="button" (click)="verificar(3)"><img src="../../../assets/tijera.jpg" class="boton"/></button>
+</div>
+
+<div *ngIf="nuevaJugada=='NO'">
+   
+    <button type="button" disabled = true (click)="verificar(1)"><img src="../../../assets/piedra.jpg" class="boton"/></button>
+    <button type="button" disabled = true (click)="verificar(2)"><img src="../../../assets/papel.jpg" class="boton"/></button>
+    <button type="button" disabled = true (click)="verificar(3)"><img src="../../../assets/tijera.jpg" class="boton"/></button>
+    
+</div>
+<br>
+<br>
+<div *ngIf="verificado=='SI'">
+    <label>
+        <b>USUARIO</b> {{this.textUsuario}} -  {{this.textMaquina}} <b>MAQUINA</b> 
+    </label>
+    <br>
+    <br>
+   <label>
+    <b>USUARIO</b> {{this.puntoDelUsuario}} -  {{this.puntoDeMaquina}} <b>MAQUINA</b>
+   </label>
+
+
+</div>
+<div *ngIf="nuevaJugada=='NO'">
+    <h3>{{this.textGanador}}</h3>
+    <button (click)="nuevoJuego()">Volver a Jugar</button>
+</div>
+
+<br>

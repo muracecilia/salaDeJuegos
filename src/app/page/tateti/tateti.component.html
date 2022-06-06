@@ -1,0 +1,41 @@
+<head>
+    <title>TA-TE-TI</title>
+    <meta charset="UTF-8">
+    <style>
+        .boton {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<hr>
+<h2>TA-TE-TI</h2>
+<br>
+
+<div>
+    <button (click)="botonPresionado(0)" class="boton">{{ttt[0]}}</button>
+    <button (click)="botonPresionado(1)" class="boton">{{ttt[1]}}</button>
+    <button (click)="botonPresionado(2)" class="boton">{{ttt[2]}}</button>
+</div>
+<div>
+    <button (click)="botonPresionado(3)" class="boton">{{ttt[3]}}</button>
+    <button (click)="botonPresionado(4)" class="boton">{{ttt[4]}}</button>
+    <button (click)="botonPresionado(5)" class="boton">{{ttt[5]}}</button>
+</div>
+<div>
+    <button (click)="botonPresionado(6)" class="boton">{{ttt[6]}}</button>
+    <button (click)="botonPresionado(7)" class="boton">{{ttt[7]}}</button>
+    <button (click)="botonPresionado(8)" class="boton">{{ttt[8]}}</button>
+</div>
+
+
+<div *ngIf="hayganador=='SI'">
+    <label>
+        <b>El ganador es : </b> {{this.elGanadorEs}} 
+    </label>
+    <br>
+
+</div>
+
+

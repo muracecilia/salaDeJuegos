@@ -1,0 +1,19 @@
+<p>adivinador works!</p>
+<h2>INGRESA UN NUMERO</h2>
+<input type="text" placeholder="posible Numero"[(ngModel)]="valor">
+<input type="button" value="Suerte" (click)="jugarNumero()">
+<br><br>
+<input type="button" value="Reiniciar Juego" (click)="numeroAleatorio()">
+
+
+<div *ngIf="valor1">
+    <p *ngIf="parametro">Valor Incorrecto es un numero mayor;</p>
+    <p *ngIf="!parametro">Valor Incorrecto es un numero menor;</p>
+</div>
+
+<p *ngIf="ganar">LO LOGRASTE!!"</p>
+
+
+<router-outlet></router-outlet>
+
+<!--p *ngIf="valor">Hola</p-->

@@ -1,0 +1,31 @@
+<body class="text-center">
+    <main class="form-signin">
+      <div>
+        <img class="mb-4" src="../assets/logo0.png" alt="" width="72" height="57">
+        <h1 class="h3 mb-3 fw-normal">Registrarse</h1>
+    
+        <div class="form-floating">
+          <input type="email" class="form-control" id="floatingInput" [(ngModel)]="auxNombre" placeholder="name@example.com">
+          <label for="floatingInput">Ingrese Usuario</label>
+        </div>
+    
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingPassword" [(ngModel)]="auxClave1" placeholder="Password">
+          <label for="floatingPassword">Password</label>
+        </div>
+    
+        <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" [(ngModel)]="auxClave2" placeholder="Password">
+            <label for="floatingPassword">Repetir Password</label>
+          </div>
+    
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" value="remember-me"> Recordar mi Usuario
+          </label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" (click)="registrar()">Registrate</button>
+    
+    </div>
+    </main>
+    </body>
